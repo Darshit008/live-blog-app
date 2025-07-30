@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, Search, SunMoon, User, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import CategoryDropdown from "@/components/CategoryDropdown";
+import { ModeToggle } from "@/components/theme-btn";
 
 import {
   NavigationMenu,
@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b shadow-sm bg-white dark:bg-black sticky top-0 z-50">
+    <nav className="w-full border-b backdrop:blur shadow-sm bg-white dark:bg-black sticky top-0 z-50">
       <div className="flex items-center justify-between px-4 py-2 max-w-7xl mx-auto">
         {/* Left: Logo + Mobile Menu Icon */}
         <div className="flex items-center gap-2">
@@ -30,12 +30,12 @@ export default function Navbar() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="flex gap-6">
             <NavigationMenuItem>
-              <NavigationMenuLink href="/" className="hover:underline">
+              <NavigationMenuLink href="/" className=" transition-transform duration-300 ease-in-out hover:scale-110">
                 Home
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/blogs" className="hover:underline">
+              <NavigationMenuLink href="/blogs" className=" transition-transform duration-300 ease-in-out hover:scale-110">
                 Blogs
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -45,7 +45,7 @@ export default function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem> */}
-              <NavigationMenuLink href="/about" className="hover:underline">
+              <NavigationMenuLink href="/about" className= "transition-transform duration-300 ease-in-out hover:scale-110">
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -60,9 +60,13 @@ export default function Navbar() {
               <Search className="h-4 w-4" />
             </Button>
           </div>
-          <Button size="icon" variant="ghost">
+          {/* <Button size="icon" variant="ghost">
             <SunMoon className="h-5 w-5" />
-          </Button>
+          </Button> */}
+
+        {/* change theme button */}
+        <ModeToggle /> 
+
           <Button size="icon" variant="ghost">
             <User className="h-5 w-5" />
           </Button>

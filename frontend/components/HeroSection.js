@@ -31,8 +31,8 @@
 //                       <CardTitle className="text-lg font-semibold mb-2">{blog.title}</CardTitle>
 //                       <CardDescription>Explore the latest insights.</CardDescription>
 //                     </div>
-//                     <a href={blog.link} target="_blank" rel="noopener noreferrer" className="mt-4">
-//                       <Button className="w-full">Read More</Button>
+//                     <a href={blog.link} target="_blank" rel="noopener noreferrer" className="mt-4 bg">
+//                       <Button className="w-full bg-pink-800 hover:bg-pink-900 text-white">Read More</Button>
 //                     </a>
 //                   </CardContent>
 //                 </Card>
@@ -65,6 +65,7 @@ export default function HeroSection({ blogs }) {
   const [active, setActive] = useState(0);
   const total = blogs.length;
   const intervalRef = useRef(null);
+  
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -74,11 +75,11 @@ export default function HeroSection({ blogs }) {
     return () => clearInterval(intervalRef.current);
   }, [total]);
 
-  useEffect(() => {
-    const scrollTo = document.querySelector(`#carousel-item-${active}`);
-     scrollTo?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+  //useEffect(() => {
+   // const scrollTo = document.querySelector(`#carousel-item-${active}`);
+     //scrollTo?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
 
-  }, [active]);
+  //}, [active]);
 
   return (
     <section className="w-full py-12 bg-gray-100 dark:bg-gray-900">
@@ -116,8 +117,14 @@ export default function HeroSection({ blogs }) {
                         rel="noopener noreferrer"
                         className="mt-4"
                       >
-                        <Button className="w-full">Read More</Button>
-                      </a>
+                      <div className ="flex">
+                      <Button className="ml-auto text-white bg-pink-800 hover:bg-gray-100 hover:text-black ">
+                          Read More
+                        </Button>
+
+                          </div>
+
+        </a>
                     </CardContent>
                   </Card>
                 </CarouselItem>

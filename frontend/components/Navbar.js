@@ -4,6 +4,7 @@ import { Menu, Search, SunMoon, User, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ModeToggle } from "@/components/theme-btn";
+import AboutSection from "./AboutSection";
 
 import {
   NavigationMenu,
@@ -49,7 +50,7 @@ export default function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem> */}
-              <NavigationMenuLink href="/about" className= "transition-transform duration-300 ease-in-out hover:scale-110 hover:text-pink-800">
+              <NavigationMenuLink href="#about" className= "transition-transform duration-300 ease-in-out hover:scale-110 hover:text-pink-800">
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>

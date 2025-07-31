@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 
 
 const blogs = [
@@ -51,6 +52,7 @@ export default function HomePage() {
     <main>
       <HeroSection blogs={blogs} />
       {/* other content */}
+      <AboutSection/>
     </main>
   );
 }

@@ -76,7 +76,8 @@ export default function HeroSection({ blogs }) {
 
   useEffect(() => {
     const scrollTo = document.querySelector(`#carousel-item-${active}`);
-    scrollTo?.scrollIntoView({ behavior: "smooth", inline: "start" });
+     scrollTo?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+
   }, [active]);
 
   return (
@@ -127,6 +128,8 @@ export default function HeroSection({ blogs }) {
           </Carousel>
         </div>
       </div>
+      
     </section>
+    
   );
 }

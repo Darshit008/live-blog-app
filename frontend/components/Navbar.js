@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ModeToggle } from "@/components/theme-btn";
 import AboutSection from "./AboutSection";
+import Link from "next/link";
 
 import {
   NavigationMenu,
@@ -73,10 +74,12 @@ export default function Navbar() {
         <ModeToggle /> 
 
         {/* login signup  */}
+        <Link href="/login">
           <Button size="icon" variant="ghost">
             <User className="h-5 w-5" />
           </Button>
-          
+        </Link>
+
         </div>
       </div>
 

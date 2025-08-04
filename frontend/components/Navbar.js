@@ -40,7 +40,7 @@ export default function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/blogs" className=" transition-transform duration-300 ease-in-out hover:scale-110   hover:text-pink-800">
+              <NavigationMenuLink href="/blog" className=" transition-transform duration-300 ease-in-out hover:scale-110   hover:text-pink-800">
                 Blogs
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -72,9 +72,11 @@ export default function Navbar() {
         {/* change theme button */}
         <ModeToggle /> 
 
+        {/* login signup  */}
           <Button size="icon" variant="ghost">
             <User className="h-5 w-5" />
           </Button>
+          
         </div>
       </div>
 

@@ -5,16 +5,16 @@ import { Separator } from "@/components/ui/separator";
 
 export default function AboutSection() {
   return (
-    <section className="bg-gray-100 py-12" id="about">
-      <div className="container  px-4 mx-auto ">
-        <Card className="bg-white shadow-lg border-0 ">
+    <section className="bg-gray-100 py-12 dark:bg-gray-900" id="about">
+      <div className="container  px-4 mx-auto  dark:text-amber-50">
+        <Card className=" dark:text-white bg-white shadow-lg border-0  dark:bg-black">
           <CardHeader>
             <CardTitle className="text-pink-800 text-3xl font-bold mb-2">
               About Our Blog
             </CardTitle>
             <Separator className="bg-pink-800 h-1 w-16 mb-4" />
           </CardHeader>
-          <CardContent className="space-y-6 text-gray-800">
+          <CardContent className="space-y-6 text-gray-800 dark:text-white">
             <p>
               <span className="font-semibold text-pink-800">Axis Max Life Insurance</span>, formerly known as Max Life Insurance, is a leading life insurer in India—a joint venture between Max Financial Services (80%) and Axis Bank (20%), operating successfully since 2001. Through a multi-channel distribution network of 405 branches and over two decades of customer-focused service, we’ve built trust by offering protection and long-term savings solutions that evolve with your life stages.
             </p>
@@ -27,7 +27,7 @@ export default function AboutSection() {
             <p>
               Our vision is to be India’s most admired life insurance company, anchored by honest practices, tailored solutions, and a mission to serve the long-term financial needs of individuals and families. Through this blog, you'll gain insights into insurance planning, risk management, retirement readiness, and much more—all backed by real data and customer experiences.
             </p>
-            <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-pink-800">
+            <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-pink-800 dark:bg-gray-800 dark:border-pink-600">
               <h3 className="text-pink-800 font-semibold mb-2">Who this blog is for:</h3>
               <p>
                 Individuals and families seeking financial protection, savings growth, or retirement solutions—whether you’re new to insurance or reviewing your current coverage.
